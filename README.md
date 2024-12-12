@@ -3,25 +3,6 @@
 
 In this work, we aim to address the dimensional collapse of MoCo v2 in medical imaging and propose two contributions to enhance the feature representations. Firstly, we introduce local feature learning that focuses on differentiating between the local regions within the input feature maps by incorporating a contrastive learning objective on the local patches of the feature maps. This helps to learn the fine-grained local features, essential for the task of medical segmentation. Secondly, we introduce feature decorrelation that uses eigenvalue decomposition to rescale and rotate the features at the final layer of the backbone. This process enhances the model’s performance by removing the correlation on the final feature map, thereby mitigating dimensional collapse during the pretraining stage
 
-### Major features
-
-- **Methods All in One**
-
-  MMSelfsup provides state-of-the-art methods in self-supervised learning. For comprehensive comparison in all benchmarks, most of the pre-training methods are under the same setting.
-
-- **Modular Design**
-
-  MMSelfSup follows a similar code architecture of OpenMMLab projects with modular design, which is flexible and convenient for users to build their own algorithms.
-
-- **Standardized Benchmarks**
-
-  MMSelfSup standardizes the benchmarks including logistic regression, SVM / Low-shot SVM from linearly probed features, semi-supervised classification, object detection and semantic segmentation.
-
-- **Compatibility**
-
-  Since MMSelfSup adopts similar design of modulars and interfaces as those in other OpenMMLab projects, it supports smooth evaluation on downstream tasks with other OpenMMLab projects like object detection and segmentation.
-
-
 
 ## Get Started
 
@@ -76,7 +57,7 @@ bash tools/dist_train.sh configs/med_segmentation/linear_head_abdomen531_to_btcv
 For finetuning using DeepLabv3plus decoder:
 tools/dist_train.sh configs/med_segmentation/deeplabv3_plus_r50-d8_512x512_imagenet_to_btcv_split_0/deeplabv3plus_r50-d8_512x1024_40k_btcv.py \
  ${num_GPUs} \
- 
+
 
 
 
