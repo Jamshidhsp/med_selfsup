@@ -25,10 +25,12 @@ In this work, we aim to address the dimensional collapse of MoCo v2 in medical i
 
 ## Get Started
 
-Download Abdomen-1K dataset (2D slices):
-`wget www.google.com`
-Download BTCV dataset (2D slices)
-`wget www.google.com`
+Download Abdomen-1K and BTCV dataset (2D slices):
+```
+wget www.google.com
+wget www.google.com
+
+```
 
 
 
