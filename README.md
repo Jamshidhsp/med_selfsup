@@ -1,43 +1,3 @@
-<div align="center">
-  <img src="./resources/mmselfsup_logo.png" width="500"/>
-  <div>&nbsp;</div>
-  <div align="center">
-    <b><font size="5">OpenMMLab website</font></b>
-    <sup>
-      <a href="https://openmmlab.com">
-        <i><font size="4">HOT</font></i>
-      </a>
-    </sup>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <b><font size="5">OpenMMLab platform</font></b>
-    <sup>
-      <a href="https://platform.openmmlab.com">
-        <i><font size="4">TRY IT OUT</font></i>
-      </a>
-    </sup>
-  </div>
-  <div>&nbsp;</div>
-
-[![PyPI](https://img.shields.io/pypi/v/mmselfsup)](https://pypi.org/project/mmselfsup)
-[![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmselfsup.readthedocs.io/en/dev-1.x/)
-[![badge](https://github.com/open-mmlab/mmselfsup/workflows/build/badge.svg)](https://github.com/open-mmlab/mmselfsup/actions)
-[![codecov](https://codecov.io/gh/open-mmlab/mmselfsup/branch/master/graph/badge.svg)](https://codecov.io/gh/open-mmlab/mmselfsup)
-[![license](https://img.shields.io/github/license/open-mmlab/mmselfsup.svg)](https://github.com/open-mmlab/mmselfsup/blob/master/LICENSE)
-[![open issues](https://isitmaintained.com/badge/open/open-mmlab/mmselfsup.svg)](https://github.com/open-mmlab/mmselfsup/issues)
-
-[📘Documentation](https://mmselfsup.readthedocs.io/en/dev-1.x/) |
-[🛠️Installation](https://mmselfsup.readthedocs.io/en/dev-1.x/get_started.html) |
-[👀Model Zoo](https://mmselfsup.readthedocs.io/en/dev-1.x/model_zoo.html) |
-[🆕Update News](https://mmselfsup.readthedocs.io/en/dev-1.x/notes/changelog.html) |
-[🤔Reporting Issues](https://github.com/open-mmlab/mmselfsup/issues/new/choose)
-
-</div>
-
-<div align="center">
-
-English | [简体中文](README_zh-CN.md)
-
-</div>
 
 ## Introduction
 
@@ -66,9 +26,9 @@ In this work, we aim to address the dimensional collapse of MoCo v2 in medical i
 ## Get Started
 
 Download Abdomen-1K dataset (2D slices):
-wget www.google.com
+'wget www.google.com'
 Download BTCV dataset (2D slices)
-!wget www.google.com
+'wget www.google.com'
 
 
 
