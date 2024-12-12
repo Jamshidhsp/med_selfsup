@@ -1,0 +1,321 @@
+[33mcommit 3fc95483e39df14c51d716c1ff7f5f1ca974d44d[m[33m ([m[1;36mHEAD -> [m[1;32m1.x[m[33m, [m[1;31morigin/1.x[m[33m)[m
+Author: jhassanpour <jamshid.hassanpour@etu.unistra.fr>
+Date:   Sun Feb 19 07:35:59 2023 +0100
+
+    sim
+
+[33mcommit ada3b9e5d25dd45091ee4de92799dc4a57b63c15[m
+Author: jhassanpour <jamshid.hassanpour@etu.unistra.fr>
+Date:   Fri Feb 17 16:31:24 2023 +0100
+
+    simmim-init
+
+[33mcommit 6c13b420a1542676957d36e466a86435a8f130bd[m[33m ([m[1;33mtag: v1.0.0rc6[m[33m, [m[1;31mold-origin/HEAD[m[33m, [m[1;31mold-origin/1.x[m[33m)[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Fri Feb 10 18:24:46 2023 +0800
+
+    Bump version to 1.0.0rc6 (#691)
+    
+    * Bump  version to 1.0.0rc6
+    
+    * update changelog
+    
+    * update date
+
+[33mcommit d3f57edf799a872e2601c7f60eaf31cd5d63e93f[m
+Author: Yuan Liu <30762564+YuanLiuuuuuu@users.noreply.github.com>
+Date:   Wed Feb 8 14:23:59 2023 +0800
+
+    [Fix]: Fix distributed setting for shape bias (#689)
+    
+    * [Fix]: Fix dist bug
+    
+    * [Fix]: Fix lint
+    
+    * [Feature]: Add download log info
+    
+    * [Fix]: Fix lint
+
+[33mcommit 0f634de85bb75d3676a8fff50a146caaba6b8fba[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Tue Feb 7 16:40:50 2023 +0800
+
+    [Feature] support MaskFeat pre-training with video (#678)
+    
+    * add maskfeat video configs
+    
+    * add maskfeat video
+    
+    * update configs
+    
+    * update readme
+    
+    * update results and links
+    
+    * update configs
+    
+    * update configs
+    
+    * update links
+    
+    * refine readme
+    
+    * refine doc
+    
+    * add ut
+    
+    * refine readme
+    
+    * update ut
+    
+    * update readme
+    
+    * update docs
+    
+    * update config
+    
+    * update train scripts in readme
+    
+    * add mmaction2 page link
+
+[33mcommit e43925cc48f5c6ac4a38a2a8bfa234198349ce01[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Fri Feb 3 14:59:31 2023 +0800
+
+    [Fix] Update link of beitv2 (#676)
+    
+    * update link of beitv2
+    
+    * update description
+
+[33mcommit 8593bef3ae6a19bddc41b18085bddd841c1743ec[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Fri Feb 3 13:59:27 2023 +0800
+
+    Switch default branch to 1.x (#686)
+    
+    * add schedule
+    
+    * update docs
+    
+    * update issue template
+    
+    * fix lint
+    
+    * update migration
+    
+    * fix lint
+    
+    * update version of isort
+
+[33mcommit 54d4cf7275c0f061bb7b1cdf13892b4f9f726741[m
+Author: Yuan Liu <30762564+YuanLiuuuuuu@users.noreply.github.com>
+Date:   Fri Feb 3 11:50:52 2023 +0800
+
+    [Fix]: Pass param by explicitly setting location (#654)
+    
+    * [Fix]: Locate param in super class
+    
+    * [Feature]: Add feature predict dim
+    
+    * [Fix]: Install wheel
+    
+    * [Fix]: Delete install wheel
+
+[33mcommit 85f1dca88ebf08e871dba18c07f286c0eaeba6af[m
+Author: GeoffreyChen777 <geoffreychen777@gmail.com>
+Date:   Tue Jan 31 11:31:43 2023 +0000
+
+    [Fix] Update default_runtime.py (#681)
+    
+    If set `by_epoch=False` for `log_processor`, an error is raised:
+    ```
+      File "/home/WMGDS.WMG.WARWICK.AC.UK/chen_c/project/mmengine/mmengine/runner/log_processor.py", line 314, in _check_window_size
+        assert log_cfg['window_size'] != 'epoch', \
+      File "/home/WMGDS.WMG.WARWICK.AC.UK/chen_c/project/mmengine/mmengine/config/config.py", line 47, in __missing__
+        raise KeyError(name)
+    KeyError: 'window_size'
+    ```
+    
+    The reason is that here `log_processor` is checking the `window_size`, not `windows_size`:
+    
+    https://github.com/open-mmlab/mmengine/blob/50465a20022938444f90314e9ce217607d8c215c/mmengine/runner/log_processor.py#L352
+
+[33mcommit 408377a9cde6e778ea8b4846d9ab6b3b325a3633[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Mon Jan 30 14:57:47 2023 +0800
+
+    update pre-commit (#685)
+
+[33mcommit f959af995a063c164a513701feb8dbb3b51c5da8[m
+Author: takuoko <to78314910@gmail.com>
+Date:   Mon Jan 30 11:46:07 2023 +0900
+
+    [BugFix] fix metafile.yaml -> metafile.yml (#680)
+    
+    * fix manifest
+    
+    * metafile.yaml -> .yml
+
+[33mcommit c951bb6d226131dad3f9dd7042323b84b9f8ff58[m
+Author: Caczhtus <42471465+Caczhtus@users.noreply.github.com>
+Date:   Mon Jan 16 14:53:53 2023 +0800
+
+    [Docs] (CodeCamp #76) translate add_transforms.md and conventions.md (#674)
+    
+    * translate add_transforms.md and conventions.md
+    
+    * translate add_transforms.md and conventions.md
+    
+    * update add_translate.md format
+    
+    * update add_translate.md format
+    
+    * update
+    
+    Co-authored-by: fangyixiao18 <fangyx18@hotmail.com>
+
+[33mcommit 386f66aa0f4247fb040106ba4a88b2bf1a32b3e2[m
+Author: Wangbo Zhao(黑色枷锁) <56866854+wangbo-zhao@users.noreply.github.com>
+Date:   Fri Jan 13 17:46:26 2023 +0800
+
+    [Fix] Fixed bugs in configs/selfsup/eva/metafile.yaml (#669)
+    
+    * [Fix] Fix bugs in configs/selfsup/eva/metafile.yaml
+    
+    * [Fix] add pretrained weights
+
+[33mcommit 482e9bbc37fce1d30bbee893bda99100adfbeeba[m
+Author: Junlin Chang <45223476+123456789asdfjkl@users.noreply.github.com>
+Date:   Wed Jan 11 19:48:41 2023 +0800
+
+    [Docs] translate classification.md, detection.md, segmentation.md (#665)
+    
+    * Add files via upload
+    
+    Chinese document translation
+    
+    * Update docs/zh_cn/user_guides/classification.md
+    
+    Co-authored-by: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+    
+    * Update docs/zh_cn/user_guides/classification.md
+    
+    Co-authored-by: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+    
+    * Update classification.md
+    
+    * Update detection.md
+    
+    * Update detection.md
+    
+    * Update segmentation.md
+    
+    * update
+    
+    Co-authored-by: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+    Co-authored-by: fangyixiao18 <fangyx18@hotmail.com>
+
+[33mcommit f96b56a4cae49ec326119a4471eac81da2e09a60[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Tue Jan 10 14:58:21 2023 +0800
+
+    fix link of knn script (#661)
+
+[33mcommit 7a16b4e3b918383636045ab3b861a16258b6a0b6[m
+Author: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+Date:   Tue Jan 10 11:25:50 2023 +0800
+
+    Deprecate the support of python 3.6 (#657)
+    
+    * Deprecate the support of python 3.6
+    
+    * fix lint
+    
+    * update
+
+[33mcommit e9f337b9454638334cab8390cf3281f511860475[m
+Author: JetstramSam <121377214+JetstramSam@users.noreply.github.com>
+Date:   Wed Jan 4 18:06:16 2023 +0800
+
+     [Docs] Translate two docs (#653)
+    
+    * translate
+    
+    * translate
+    
+    * Update visualization.md
+    
+    * Update analysis_tools.md
+    
+    * Update visualization.md
+    
+    * Update analysis_tools.md
+    
+    * Update visualization.md
+    
+    * Update visualization.md
+    
+    * Update visualization.md
+    
+    * Update visualization.md
+    
+    * Update visualization.md
+    
+    * Update analysis_tools.md
+    
+    * Update visualization.md
+    
+    * Update analysis_tools.md
+    
+    * Update visualization.md
+    
+    * update
+    
+    Co-authored-by: fangyixiao18 <fangyx18@hotmail.com>
+
+[33mcommit 0ad8faf3451ebaf8ab3dcad6d38db924a1e46f6d[m
+Author: JetstramSam <121377214+JetstramSam@users.noreply.github.com>
+Date:   Wed Jan 4 11:26:25 2023 +0800
+
+    [Docs] Translate three docs (#651)
+    
+    * translate into Chinese
+    
+    * Update structures.md
+    
+    * translate into Chinese
+    
+    * Update models.md
+    
+    * Update models.md
+    
+    * Update models.md
+    
+    * Update structures.md
+    
+    * Update structures.md
+    
+    * Update structures.md
+    
+    * Update structures.md
+    
+    * Update transforms.md
+    
+    * Update transforms.md
+    
+    * Update transforms.md
+    
+    * Update transforms.md
+    
+    * Update transforms.md
+    
+    * Update models.md
+    
+    * Update docs/en/advanced_guides/models.md
+    
+    Co-authored-by: Yixiao Fang <36138628+fangyixiao18@users.noreply.github.com>
+    
+    * Update docs/en/advanced_guides/models.md
+    
+    Co-author
