@@ -27,8 +27,8 @@ In this work, we aim to address the dimensional collapse of MoCo v2 in medical i
 
 Download Abdomen-1K and BTCV dataset (2D slices):
 ```
-wget www.google.com
-wget www.google.com
+wget https://seafile.unistra.fr/d/21b27c71d0014910a823/ 
+wget https://seafile.unistra.fr/d/91b8a9ec9f0246b19ddb/
 
 ```
 
@@ -37,12 +37,54 @@ wget www.google.com
 ## Installation
 Having [Anaconda3](https://www.anaconda.com/products/individual#linux) installed follow the following steps for installation.
 ```
-git clone https://github.com/CAMMA-public/SelfSupSurg
+conda create -n med_selfsupervised python=3.8 && conda activate med_selfsupervised
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
+pip install -U openmim
+git clone https://github.com/open-mmlab/mmselfsup.git
+cd mmselfsup/
+pip install -e .
+mim install mmcv==2.0.0rc4
+mim install mmengine==0.7.1
+cd ../ && rm -rf mmselfsup
+git clone https://github.com/CAMMA-public/med_selfsup
+cd pretraining/
+pip install -r requirements
+
+```
+
+## Pretrain
+Make sure of the file_paths and put file_list in the right path:
+```
+cp Abdomen1K-2D/train_abdomen.txt configs/selfsup/med_segmentation/mocov2_resnet50_8xb32-coslr-200e_abdomen1k_split_0_local_features_layer_4/
+```
+```
+bash tools/dist_train.sh configs/selfsup/med_segmentation/mocov2_resnet50_8xb32-coslr-200e_abdomen1k_split_0_local_features_layer_4/mocov2_resnet50_8xb32-coslr-btcv_split_0.py \
+ ${num_GPUs} \
+
+```
+
+## Evaluation
+we use mmseg for evaluation
+```
+cd ..
+cd evaluation/
+
+For linear decoder:
+bash tools/dist_train.sh configs/med_segmentation/linear_head_abdomen531_to_btcv_50_ft_local_layer4/deeplabv3plus_r50-d8_512x1024_40k_btcv.py \
+ ${num_GPUs} \
+
+For finetuning using DeepLabv3plus decoder:
+tools/dist_train.sh configs/med_segmentation/deeplabv3_plus_r50-d8_512x512_imagenet_to_btcv_split_0/deeplabv3plus_r50-d8_512x1024_40k_btcv.py \
+ ${num_GPUs} \
+ 
+
 
 
 ```
-## Citation
 
+
+
+## Citation
 we used mmselfsup and mmseg for this project. Please cite them if you use them. 
 @misc{mmselfsup2021,
     title={{MMSelfSup}: OpenMMLab Self-Supervised Learning Toolbox and Benchmark},

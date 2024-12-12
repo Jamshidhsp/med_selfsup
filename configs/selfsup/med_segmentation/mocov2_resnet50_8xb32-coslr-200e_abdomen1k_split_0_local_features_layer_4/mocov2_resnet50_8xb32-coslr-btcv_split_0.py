@@ -10,7 +10,7 @@ train_dataloader = dict(
     batch_size=64,
     num_workers=8,
     dataset=dict(
-        ann_file='/home/hassanpour/datasets/abdomen_1k/img_dir/train/train_abdomen_ssl.txt',
+        ann_file='../train_abdomen_ssl.txt',
     
     )
 )
