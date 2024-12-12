@@ -26,19 +26,19 @@ In this work, we aim to address the dimensional collapse of MoCo v2 in medical i
 ## Get Started
 
 Download Abdomen-1K dataset (2D slices):
-'wget www.google.com'
+`wget www.google.com`
 Download BTCV dataset (2D slices)
-'wget www.google.com'
+`wget www.google.com`
 
 
 
 ## Installation
-Having [Anaconda3][https://www.anaconda.com/products/individual#linux] installed follow the following steps for installation.
+Having [Anaconda3](https://www.anaconda.com/products/individual#linux) installed follow the following steps for installation.
 ```
 git clone https://github.com/CAMMA-public/SelfSupSurg
 
 
-
+```
 ## Citation
 
 we used mmselfsup and mmseg for this project. Please cite them if you use them. 
