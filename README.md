@@ -61,26 +61,6 @@ In this work, we aim to address the dimensional collapse of MoCo v2 in medical i
 
   Since MMSelfSup adopts similar design of modulars and interfaces as those in other OpenMMLab projects, it supports smooth evaluation on downstream tasks with other OpenMMLab projects like object detection and segmentation.
 
-## What's New
-
-**The default branch has been switched to `1.x` from `master`, and we encourage users to migrate to the latest version, though it comes with some cost. Please refer to [Migration Guide](https://mmselfsup.readthedocs.io/en/1.x/migration.html) for more details.**
-
-MMSelfSup **v1.0.0rc6** was released in 10/02/2023.
-
-- Support `MaskFeat` with video dataset in `projects/maskfeat_video/`
-- Translate documentation to Chinese.
-
-MMSelfSup **v1.0.0rc5** was released in 30/12/2022.
-
-- Support `BEiT v2`, `MixMIM`, `EVA`.
-- Support `ShapeBias` for model analysis
-- Add Solution of FGIA ACCV 2022 (1st Place)
-- Refactor t-SNE
-
-Please refer to [Changelog](https://mmselfsup.readthedocs.io/en/dev-1.x/notes/changelog.html) for details and release history.
-
-Differences between MMSelfSup 1.x and 0.x can be found in [Migration](https://mmselfsup.readthedocs.io/en/dev-1.x/migration.html).
-
 ## Installation
 
 MMSelfSup depends on [PyTorch](https://pytorch.org/), [MMCV](https://github.com/open-mmlab/mmcv), [MMEngine](https://github.com/open-mmlab/mmengine) and [MMClassification](https://github.com/open-mmlab/mmclassification).
@@ -89,15 +69,10 @@ Please refer to [Installation](https://mmselfsup.readthedocs.io/en/dev-1.x/get_s
 
 ## Get Started
 
-For tutorials, we provide [User Guides](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/index.html) for basic usage:
-
 Pretrain
-
-- [Config](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/1_config.html)
-- [Prepare Dataset](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/2_dataset_prepare.html)
-- [Pretrain with Existing Models](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/3_pretrain.html)
-
+Download Abdomen-1K dataset (2D slices).
 Downetream Tasks
+Download BTCV dataset (2D slices)
 
 - [Classification](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/classification.html)
 - [Detection](https://mmselfsup.readthedocs.io/en/dev-1.x/user_guides/detection.html)
