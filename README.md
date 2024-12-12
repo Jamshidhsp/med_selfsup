@@ -41,9 +41,7 @@ English | [简体中文](README_zh-CN.md)
 
 ## Introduction
 
-MMSelfSup is an open source self-supervised representation learning toolbox based on PyTorch. It is a part of the [OpenMMLab](https://openmmlab.com/) project.
-
-The master branch works with **PyTorch 1.6** or higher.
+In this work, we aim to address the dimensional collapse of MoCo v2 in medical imaging and propose two contributions to enhance the feature representations. Firstly, we introduce local feature learning that focuses on differentiating between the local regions within the input feature maps by incorporating a contrastive learning objective on the local patches of the feature maps. This helps to learn the fine-grained local features, essential for the task of medical segmentation. Secondly, we introduce feature decorrelation that uses eigenvalue decomposition to rescale and rotate the features at the final layer of the backbone. This process enhances the model’s performance by removing the correlation on the final feature map, thereby mitigating dimensional collapse during the pretraining stage
 
 ### Major features
 
@@ -177,40 +175,11 @@ MMSelfSup originates from OpenSelfSup, and we appreciate all early contributions
 
 If you use this toolbox or benchmark in your research, please cite this project.
 
-```bibteX
+we used mmselfsup and mmseg for this project. Please cite them if you use them. 
 @misc{mmselfsup2021,
     title={{MMSelfSup}: OpenMMLab Self-Supervised Learning Toolbox and Benchmark},
     author={MMSelfSup Contributors},
     howpublished={\url{https://github.com/open-mmlab/mmselfsup}},
     year={2021}
 }
-```
 
-## License
-
-This project is released under the [Apache 2.0 license](LICENSE).
-
-## Projects in OpenMMLab
-
-- [MMEngine](https://github.com/open-mmlab/mmengine): OpenMMLab foundational library for training deep learning models.
-- [MMCV](https://github.com/open-mmlab/mmcv): OpenMMLab foundational library for computer vision.
-- [MMEval](https://github.com/open-mmlab/mmeval): A unified evaluation library for multiple machine learning libraries.
-- [MIM](https://github.com/open-mmlab/mim): MIM installs OpenMMLab packages.
-- [MMClassification](https://github.com/open-mmlab/mmclassification): OpenMMLab image classification toolbox and benchmark.
-- [MMDetection](https://github.com/open-mmlab/mmdetection): OpenMMLab detection toolbox and benchmark.
-- [MMDetection3D](https://github.com/open-mmlab/mmdetection3d): OpenMMLab's next-generation platform for general 3D object detection.
-- [MMRotate](https://github.com/open-mmlab/mmrotate): OpenMMLab rotated object detection toolbox and benchmark.
-- [MMYOLO](https://github.com/open-mmlab/mmyolo): OpenMMLab YOLO series toolbox and benchmark.
-- [MMSegmentation](https://github.com/open-mmlab/mmsegmentation): OpenMMLab semantic segmentation toolbox and benchmark.
-- [MMOCR](https://github.com/open-mmlab/mmocr): OpenMMLab text detection, recognition, and understanding toolbox.
-- [MMPose](https://github.com/open-mmlab/mmpose): OpenMMLab pose estimation toolbox and benchmark.
-- [MMHuman3D](https://github.com/open-mmlab/mmhuman3d): OpenMMLab 3D human parametric model toolbox and benchmark.
-- [MMSelfSup](https://github.com/open-mmlab/mmselfsup): OpenMMLab self-supervised learning toolbox and benchmark.
-- [MMRazor](https://github.com/open-mmlab/mmrazor): OpenMMLab model compression toolbox and benchmark.
-- [MMFewShot](https://github.com/open-mmlab/mmfewshot): OpenMMLab fewshot learning toolbox and benchmark.
-- [MMAction2](https://github.com/open-mmlab/mmaction2): OpenMMLab's next-generation action understanding toolbox and benchmark.
-- [MMTracking](https://github.com/open-mmlab/mmtracking): OpenMMLab video perception toolbox and benchmark.
-- [MMFlow](https://github.com/open-mmlab/mmflow): OpenMMLab optical flow toolbox and benchmark.
-- [MMEditing](https://github.com/open-mmlab/mmediting): OpenMMLab image and video editing toolbox.
-- [MMGeneration](https://github.com/open-mmlab/mmgeneration): OpenMMLab image and video generative models toolbox.
-- [MMDeploy](https://github.com/open-mmlab/mmdeploy): OpenMMLab model deployment framework.
